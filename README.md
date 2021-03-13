@@ -28,21 +28,15 @@ Examples: Refrigerator door system
 
 # COMPONENTS    
 
-Hardware Components                                                    Software apps and online services
+Hardware Components , Software apps and online services
 
-Bolt wifi module                                                       Bolt cloud
+Bolt wifi module     Bolt cloud           LM35 sensor	       Ubuntu server       Piezo buzzer	      VMware workstation       LED	                                                                  
 
-LM35 sensor	                                                           Ubuntu server
+Mailgun             Bread board           Jumper wires        Data cable
 
-Piezo buzzer	                                                         VMware workstation
 
-LED	                                                                   Mailgun
 
-Bread board
 
-Jumper wires
-
-Data cable
 
 
 # Introduction
