@@ -237,11 +237,13 @@ STEP 18: The statement ‘time.sleep(10)’ puts the program execution on hold f
 
 Prediction of future temperature data
 
-
+![image](https://github.com/Thushar-marvel/ML-and-IOT-based-Temperature-monitoring-system/blob/main/images/2020-03-25%20(6).png)
 
 
 
 2.Temperature monitoring in the room and carrying Z-score analysis ,and sending  emai alerts.
+
+![image](
 
 
 
