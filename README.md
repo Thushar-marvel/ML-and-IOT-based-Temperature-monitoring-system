@@ -95,6 +95,9 @@ Ubuntu Server is a server operating system, developed by Canonical , that runs o
 Polynomial regression is a form of regression analysis in which the relationship between the independent variable x and the dependent variable y is modelled as an nth degree polynomial in x. Polynomial regression fits a nonlinear relationship between the value of x and the corresponding conditional mean of y, denoted E(y |x). Although polynomial regression fits a nonlinear model to the data, as a statistical estimation problem it is linear, in the sense that the regression function E(y | x) is linear in the unknown parameters that are estimated from the data.
 Prediction Points: This number tells the Visualizer how many future data points need to be predicted. By default, the Visualizer spaces the points with the data collection time in the hardware configuration of the product. So if you set the product to collect data every 5 minutes, and select 6 prediction points, the Visualizer will predict the trend and show 6 points up to 30 minutes into the future.
 
+![image](https://user-images.githubusercontent.com/69953585/111027165-7c9fec80-8414-11eb-8a49-976199ed3f3c.png)
+
+
 
  
 
@@ -107,6 +110,9 @@ Frame Size: These are the number of previous data points the Visualizer will use
 Z-score analysis is used for anomaly detection. Anomaly here means a variable's value (temperature of the surroundings) going beyond a certain range of values. The range of values is called bounds (upper bound and lower bound). These bounds are calculated using the input values, frame size and multiplication factor. The frame size is the minimum number of input values needed for Z-score analysis and the multiplication factor determines the closeness of the bounds to the input values curve.It basically works to detect any sudden change in the sensor value when someone opens the door of fridge the temperature suddenly changes and this anomaly when detected the alert message sent via Email to the user.
 we calculate the Z score (Zn) for the data and use it to calculate the upper and lower threshold bounds required to check if a new data point is normal or anomalous. by formula
 where Mn is taken as mean Vi is variance and Zn as Z-score.
+![image](https://user-images.githubusercontent.com/69953585/111027176-8c1f3580-8414-11eb-8da7-11bce0bbf216.png)
+
+
 All repeats again and again with an gap of 10 sec and continuously monitors the system 24*7
 Anomaly detection is done by using Z-score analysis which utilizes this formulas to calculate the the threshold values. Based on the average of the input values it determines a threshold boundry, if there is an sudden drop in the the value beyond these range it is able to detect it and alerts messages can be sent to the user by written suitable code.
 
