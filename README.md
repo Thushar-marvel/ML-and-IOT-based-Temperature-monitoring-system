@@ -30,13 +30,17 @@ Examples: Refrigerator door system
 
 Hardware Components , Software apps and online services
 
-Bolt wifi module     Bolt cloud           LM35 sensor	       Ubuntu server       Piezo buzzer	      VMware workstation       LED	                                                                  
-
-Mailgun             Bread board           Jumper wires        Data cable
-
-
-
-
+Bolt wifi module     
+Bolt cloud           
+LM35 sensor	       
+Ubuntu server       
+Piezo buzzer	      
+VMware workstation       
+LED	                                                                  
+Mailgun             
+Bread board           
+Jumper wires       
+Data cable
 
 
 # Introduction
@@ -128,6 +132,7 @@ Go [here]( https://cloud.boltiot.com/) and then follow the steps below:
 * Create product [here](https://docs.boltiot.com/docs/adding-a-product)
 *Writing code for controling device [here](https://docs.boltiot.com/docs/using-custom-files-in-your-product)
 *Link device to product [by using this link]( https://docs.boltiot.com/docs/link-device-to-a-product)
+
 Step 2: Write a code in javascript to carry out the polynomial regression
 setChartLibrary('google_chart');
 setChartTitle('Pharma Monitor');
@@ -137,8 +142,11 @@ mul(0.097); (converts the sensor input value to output temperature in degree cel
 plotChart('time_stamp','temp');
 
 Step 3:Sign up to the mailgun
+
 Step 3.1: Open [this link](https://www.mailgun.com/) in browser.
+
 Step3. 2: Click on Sign Up button
+
 Fill all the necessary details in SIGN UP form.
 Generate mailgun API key,sandbox url and senders email
  
@@ -146,6 +154,7 @@ Generate mailgun API key,sandbox url and senders email
  
 
 Step 4: Login to the Ubuntu via virtual machine VMware
+
 After successful login, create a file named email_conf.py  which will store all the credentials related to Mailgun.
 To create a new file type sudo nano email_conf.py in the terminal. After that write below code to save all the credentials in a single file
 MAILGUN_API_KEY = 'This is the private API key which you can find on your Mailgun Dashboard' 
@@ -165,32 +174,59 @@ Go to the API section to know the API Key
 
  
 Step 5: Create an new file named buzzer.py which contains main code to collect the data from the Bolt and send Email if it crosses the threshold and carry out Z-score analysis.
+
 Step 6: Time to run the code. To do so type sudo python3 buzzer.py in terminal
 
-Steps for writing the python code (buzzer.py):
+# Steps for writing the python code (buzzer.py):
+
 STEP 1: In the code, first import the conf file which has all the credentials. Bolt python library which will fetch the data stored in Bolt cloud. The email library is also imported to send email alerts and Bolt is used for accessing data from bolt devices. The python JSON and time libraries are also imported. The math and statistics libraries will be required for calculating the Z-score and the threshold boundaries.
+
 STEP 2: Now initialize a variable that will store the maximum and minimum threshold value. This would send an alert if temperature goes above the maximum limit and below the minimum limit
+
 STEP 3: Z-score calculates the boundaries required for anomaly detection.This Function takes 3 input variables: hisotry_data, frame_size and factor and  checks whether enough data has been accumulated to calculate the Z-score, and if there is too much data, then the code deletes the older data.
+
 STEP 4: Calculates the means(Mn)  and variance value of the collected data points.
-STEP 5:Here we calculate the Z score (Zn) for the data and use it to calculate the upper and lower threshold bounds required to check if a new data point is normal or anomalous. 
+
+STEP 5:Here we calculate the Z score (Zn) for the data and use it to calculate the upper and lower threshold bounds required to check if a new data point is normal or anomalous.
+
 STEP 3: To fetch data from Bolt cloud, create an object called ‘mybolt’ which can access the data from Bolt. For the Bolt Cloud to identify the bolt device, provide the API key and the Device ID when creating mybolt object. To send an email, create an object of the same.
+
 STEP 4: To continuously monitor the temperature reading, enclose the logic to fetch, compare and send the email inside an infinite loop using the ‘while True:’ statement. To exit the loop, press CTRL+C.
+
 STEP 5: The led and buzzer system is run by the ‘digitalWrite’ function, connected to the D4 pin of Bolt.
+
 STEP 6: The code fetches sensor value using ‘analogRead’ function which is connected to the A0 pin of Bolt.
+
 STEP 7: The response from the Bolt cloud using the analogRead() function is in JSON format, so load the JSON data sent by cloud using Python’s JSON library.
+
 STEP 8: The sensor value is inside a field labeled as “value” in the response. Access the JSON values using the statement ‘sensor_value = int(data[‘value’])’. This line also converts sensor reading to integer datatype.
+
 STEP 9: This is enclosed inside a try-except block to handle any error that may occur in the code.
+
 STEP 10: The next line of code checks if the sensor reading is with in the  limit or not. If it exceeds, then email will be sent.
+
 STEP 11:If the above statement is true then digitalWrite() is executed on the D1 pin of the Bolt, turning ON the  led and buzzer.
+
 STEP 12:The email to be sent containing the text “The temperature  exceed the threshold  limit” followed by sensor reading.
+
 STEP 13:The response from mailgun will be stored inside the ‘response’ variable.
+
 STEP 14: The status of the message is printed on the console.
+
 STEP 15: The statement ‘time.sleep(10)’ puts the program execution on hold for 10 seconds. 
+
 STEP 16: The next line code shows the z-score analysis to turn on the  led and buzzer using digitalWrite() function when the temperature crosses the the limit set by z-score analysis.
+
 STEP 17: The mail sent to the user which contains the text “Someone has opened the door.”
+
 STEP 18: The statement ‘time.sleep(10)’ puts the program execution on hold for 10 seconds
 
 
+# Results
+
+Prediction of future temperature data
+
+2.Temperature monitoring in the room and carrying Z-score analysis ,and sending  emai alerts.
 
 
 
@@ -198,6 +234,8 @@ STEP 18: The statement ‘time.sleep(10)’ puts the program execution on hold f
 
 
 
+
+Credits-       THANKS FOR BOLT IOT
 
 
 
