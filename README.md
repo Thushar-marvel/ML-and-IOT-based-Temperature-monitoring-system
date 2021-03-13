@@ -3,6 +3,11 @@
 
 This is the final capstone project done during internship in IOT BOLT
 
+
+
+
+![image](https://github.com/Thushar-marvel/ML-and-IOT-based-Temperature-monitoring-system/blob/main/images/IMG_20200325_230015.jpg)
+
 ![image](https://user-images.githubusercontent.com/69953585/111018510-311f1b80-83df-11eb-86ca-b76fbe8d2b9f.png)
 
 # Overview
