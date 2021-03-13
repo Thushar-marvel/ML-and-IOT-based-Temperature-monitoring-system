@@ -88,16 +88,19 @@ Ubuntu Server is a server operating system, developed by Canonical , that runs o
 
 # Methods
 
-Polynomial regression
-polynomial regression is a form of regression analysis in which the relationship between the independent variable x and the dependent variable y is modelled as an nth degree polynomial in x. Polynomial regression fits a nonlinear relationship between the value of x and the corresponding conditional mean of y, denoted E(y |x). Although polynomial regression fits a nonlinear model to the data, as a statistical estimation problem it is linear, in the sense that the regression function E(y | x) is linear in the unknown parameters that are estimated from the data.
+# Polynomial regression
+Polynomial regression is a form of regression analysis in which the relationship between the independent variable x and the dependent variable y is modelled as an nth degree polynomial in x. Polynomial regression fits a nonlinear relationship between the value of x and the corresponding conditional mean of y, denoted E(y |x). Although polynomial regression fits a nonlinear model to the data, as a statistical estimation problem it is linear, in the sense that the regression function E(y | x) is linear in the unknown parameters that are estimated from the data.
 Prediction Points: This number tells the Visualizer how many future data points need to be predicted. By default, the Visualizer spaces the points with the data collection time in the hardware configuration of the product. So if you set the product to collect data every 5 minutes, and select 6 prediction points, the Visualizer will predict the trend and show 6 points up to 30 minutes into the future.
+
+
  
 
 No. Polynomial Coefficients: Polynomial Visualizer processes the given input time-dependent data, and outputs the coefficients of the function of the form:
 which most closely resembles the trend in the input data. This number tells the Visualizer how many elements should be present in the function i.e. the value of n.
 Frame Size: These are the number of previous data points the Visualizer will use to predict the trend of the data. For example, if you set this value to 5, the Visualizer will use the previous 5 points to predict the trend.
 
-Anomaly detection  by Z-score analysis
+# Anomaly detection  by Z-score analysis
+
 Z-score analysis is used for anomaly detection. Anomaly here means a variable's value (temperature of the surroundings) going beyond a certain range of values. The range of values is called bounds (upper bound and lower bound). These bounds are calculated using the input values, frame size and multiplication factor. The frame size is the minimum number of input values needed for Z-score analysis and the multiplication factor determines the closeness of the bounds to the input values curve.It basically works to detect any sudden change in the sensor value when someone opens the door of fridge the temperature suddenly changes and this anomaly when detected the alert message sent via Email to the user.
 we calculate the Z score (Zn) for the data and use it to calculate the upper and lower threshold bounds required to check if a new data point is normal or anomalous. by formula
 where Mn is taken as mean Vi is variance and Zn as Z-score.
@@ -110,11 +113,11 @@ Anomaly detection is done by using Z-score analysis which utilizes this formulas
  
  1.	Hold the sensor in a manner such that you can read LM35 written on it.
 2.	In this position, identify the pins of the sensor as VCC, Output and Gnd from your left to right
-VCC is connected to the green wire, Output is connected to the blue wire and Gnd is connected  to the yellow wire           
+    VCC is connected to the green wire, Output is connected to the blue wire and Gnd is connected  to the yellow wire           
 3.	Using male to female  jumper wire connect the 3 pins of the LM35 to the Bolt Wifi Module as follows:
-•	VCC pin of the LM35 connects to 5v of the Bolt Wifi module.
-•	Output pin of the LM35 connects to A0 (Analog input pin) of the Bolt Wifi module.
-•	Gnd pin of the LM35 connects to the Gnd
+    •	VCC pin of the LM35 connects to 5v of the Bolt Wifi module.
+    •	Output pin of the LM35 connects to A0 (Analog input pin) of the Bolt Wifi module.
+    •	Gnd pin of the LM35 connects to the Gnd
 
  
  Connecting  Buzzer and LED to the bolt via bread board
@@ -123,12 +126,14 @@ Buzzer and LED  is connected to GPIO pin
 + ve terminal is connected to GPIO pin 1
 -ve terminal is connected to GPIO pin 4
 
+
+
 After the circuit connections following steps are done.
 Step 1: Linking the product to the bolt device
-Go to https://cloud.boltiot.com/ and then follow the steps below:
-* Create product https://docs.boltiot.com/docs/adding-a-product
-*Writing code for controling device https://docs.boltiot.com/docs/using-custom-files-in-your-product
-*Link device to product https://docs.boltiot.com/docs/link-device-to-a-product
+Go [here]( https://cloud.boltiot.com/) and then follow the steps below:
+* Create product [here](https://docs.boltiot.com/docs/adding-a-product)
+*Writing code for controling device [here](https://docs.boltiot.com/docs/using-custom-files-in-your-product)
+*Link device to product [by using this link]( https://docs.boltiot.com/docs/link-device-to-a-product)
 Step 2: Write a code in javascript to carry out the polynomial regression
 setChartLibrary('google_chart');
 setChartTitle('Pharma Monitor');
@@ -138,7 +143,7 @@ mul(0.097); (converts the sensor input value to output temperature in degree cel
 plotChart('time_stamp','temp');
 
 Step 3:Sign up to the mailgun
-Step 3.1: Open https://www.mailgun.com/ in browser.
+Step 3.1: Open [this link](https://www.mailgun.com/) in browser.
 Step3. 2: Click on Sign Up button
 Fill all the necessary details in SIGN UP form.
 Generate mailgun API key,sandbox url and senders email
@@ -159,7 +164,7 @@ FRAME_SIZE=10
 MUL_FACTOR=6 
 
 The API key and Device ID of the Bolt module can be determined as follows:
-•	Connect your Bolt Device to the Bolt Cloud as per instructions given at https://cloud.boltiot.com/.
+•	Connect your Bolt Device to the Bolt Cloud as per instructions given at [here](https://cloud.boltiot.com/)
 •	The following screen will appear after that.The Bolt Device ID is highlighted in yellow.
  
 Go to the API section to know the API Key
