@@ -51,26 +51,31 @@ This project has primarily three functionalities i.e. sense the temperature of t
 # Materials
 Bolt Wifi module
 BOLT is an Internet of Things platform Hardware+Software that enables user to build IoT products and projects. Using BOLT, users can control and monitor devices from any part of the world.For more info visit [here](https://www.boltiot.com/)
+
 ![image](https://user-images.githubusercontent.com/69953585/111018734-96bfd780-83e0-11eb-8d8d-f9826375d960.png)
 
 LM35- Temperature sensor
 The LM35 series are precision integrated-circuit temperature sensors, whose output voltage is linearly proportional to the Celsius(Centigrade) temperature
+
 ![image](https://user-images.githubusercontent.com/69953585/111018753-b525d300-83e0-11eb-90ac-9c67d019c374.png)
 
 
 Piezo Buzzer
 •	A piezo buzzer is a sound producing device.
 •	The main working principle is based on the theory that, whenever an electric potential is applied across a piezoelectric material, a pressure variation is generated. A piezo buzzerconsists of piezo crystals in between two conductors
+
 ![image](https://user-images.githubusercontent.com/69953585/111018767-ce2e8400-83e0-11eb-84e3-aad4cd1b6e53.png)
 
   LED-Light emitting diode
 An LED is an electronic device that emits light when an electrical current is passed through it. ... LEDs are commonly used for indicator lights (such as power on/off lights) on electronic devices
+
 ![image](https://user-images.githubusercontent.com/69953585/111018777-e1415400-83e0-11eb-928d-6f0ddfaa6570.png)
 
 
 Mailgun
 Mailgun is an Email automation service. It has a very powerful set of inbuilt functions for sending emails. Developers can process their email with the help of Mailgun API
 [see here](http://a5theory.com/mailgun/)
+
 ![image](https://user-images.githubusercontent.com/69953585/111018806-19489700-83e1-11eb-9d13-3fac65b75fc1.png)
 
 
@@ -116,6 +121,8 @@ Anomaly detection is done by using Z-score analysis which utilizes this formulas
     •	VCC pin of the LM35 connects to 5v of the Bolt Wifi module.
     •	Output pin of the LM35 connects to A0 (Analog input pin) of the Bolt Wifi module.
     •	Gnd pin of the LM35 connects to the Gnd
+    
+    [image](https://github.com/Thushar-marvel/ML-and-IOT-based-Temperature-monitoring-system/blob/main/images/IMG20200323235124.jpg)
 
  
  Connecting  Buzzer and LED to the bolt via bread board
