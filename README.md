@@ -131,6 +131,10 @@ Buzzer and LED  is connected to GPIO pin
 + ve terminal is connected to GPIO pin 1
 -ve terminal is connected to GPIO pin 4
 
+![image](https://github.com/Thushar-marvel/ML-and-IOT-based-Temperature-monitoring-system/blob/main/images/temperature%20monitor%20circuit%20diagram_bb%201.jpg)
+
+
+![image](https://github.com/Thushar-marvel/ML-and-IOT-based-Temperature-monitoring-system/blob/main/images/temperature%20monitor%20circuit%20diagram_schem%202.jpg)
 
 
 After the circuit connections following steps are done.
@@ -232,6 +236,10 @@ STEP 18: The statement ‘time.sleep(10)’ puts the program execution on hold f
 # Results
 
 Prediction of future temperature data
+
+
+
+
 
 2.Temperature monitoring in the room and carrying Z-score analysis ,and sending  emai alerts.
 
