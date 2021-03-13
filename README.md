@@ -243,7 +243,7 @@ Prediction of future temperature data
 
 2.Temperature monitoring in the room and carrying Z-score analysis ,and sending  emai alerts.
 
-![image](
+![image](https://github.com/Thushar-marvel/ML-and-IOT-based-Temperature-monitoring-system/blob/main/images/hj%20(2).png)
 
 
 
