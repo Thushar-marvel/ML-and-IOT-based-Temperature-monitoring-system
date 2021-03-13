@@ -122,7 +122,7 @@ Anomaly detection is done by using Z-score analysis which utilizes this formulas
     •	Output pin of the LM35 connects to A0 (Analog input pin) of the Bolt Wifi module.
     •	Gnd pin of the LM35 connects to the Gnd
     
-    [image](https://github.com/Thushar-marvel/ML-and-IOT-based-Temperature-monitoring-system/blob/main/images/IMG20200323235124.jpg)
+  ![image](https://github.com/Thushar-marvel/ML-and-IOT-based-Temperature-monitoring-system/blob/main/images/IMG20200323235124.jpg)
 
  
  Connecting  Buzzer and LED to the bolt via bread board
